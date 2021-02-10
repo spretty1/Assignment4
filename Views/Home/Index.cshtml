@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Top 5 Restaurants in Provo";
+}
+@model IEnumerable<string>
+<!--Samantha Prettyman 1-7, program shows the top restaurants in provo and allows for suggestions, which it also displays-->
+<!DOCTYPE html>
+<html>
+<head>
+    <!--creates title as well as allows site to adjust to window size-->
+    <title>Top 5 Restaurants in Provo</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <header>
+        <!--sets the two headers, the first being done dynamically with razor code-->
+        <h4 class="bg-primary text-white text-center">Welcome!</h4>
+    </header>
+
+    <div class="list-group">
+        <!--loops through creating a list of all the fav restuarants-->
+        <ul>
+            @foreach (string r in Model)
+            {
+                <li class="list-group-item">@r</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

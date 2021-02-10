@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Suggestion Received for " + Model.RestaurantName + " from " + Model.Name;
+}
+@model Assignment4.Models.SuggestionCollection
+
+
+<div>
+    <!--the output of the page-->
+    <h2>Your suggestion has just been added to the list.</h2>
+    <p>Thank you for your suggestion!</p>
+</div>
+
+<div>
+    <!-- has a link to the suggestion collection page -->
+    Click <a asp-action="SuggestionList">here</a> to see the current suggestions
+</div>

@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Suggestion Form";
+}
+@model Assignment4.Models.SuggestionCollection
+
+<!--creates form with associated options-->
+<form asp-action="SuggestForm" method="post">
+    <div asp-validation-summary="All">
+        <div>
+            <label asp-for="Name">Your Name:</label>
+            <input asp-for="Name" />
+        </div>
+
+        <div>
+            <label asp-for="RestaurantName">Restaurant Name:</label>
+            <input asp-for="RestaurantName" />
+        </div>
+
+        <div>
+            <label asp-for="FavDish">Favorite Dish:</label>
+            <input asp-for="FavDish" />
+        </div>
+
+        <div>
+            <label asp-for="RestaurantPhoneNum">Restaurant Phone Number:</label>
+            <input asp-for="RestaurantPhoneNum" />
+        </div>
+
+        <button type="submit">Add Suggestion</button>
+    </div>
+</form>

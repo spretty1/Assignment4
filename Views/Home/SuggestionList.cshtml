@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Suggestion List";
+}
+@model IEnumerable<Assignment4.Models.SuggestionCollection>
+
+<div>
+    <h2>Here are the movies currently in the collection</h2>
+
+    <table>
+        <thead>
+            <tr><th>Suggester</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Restaurant Phone Number</th></tr>
+        </thead>
+        <tbody>
+            <!--loop to create the table to display all except independence day-->
+            @foreach (Assignment4.Models.SuggestionCollection x in Model)
+            {
+
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavDish</td>
+                    <td>@x.RestaurantPhoneNum</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
